@@ -27,15 +27,15 @@
 		</b-modal>
 
 		<div class="col-4">
-			<b-button block variant="secondary" @click="addBook">add</b-button>
+			<b-button block variant="secondary" @click="addBook">Добавить</b-button>
 		</div>
 
 		<div class="col-4">
-			<b-button block variant="secondary" @click="updBook" :disabled="this.selectedBooks.length != 1">upd</b-button>
+			<b-button block variant="secondary" @click="updBook" :disabled="this.selectedBooks.length != 1">Обновить</b-button>
 		</div>
 
 		<div class="col-4">
-			<b-button block variant="secondary" @click="delBook" :disabled="this.selectedBooks.length == 0">del</b-button>
+			<b-button block variant="secondary" @click="delBook" :disabled="this.selectedBooks.length == 0">Удалить</b-button>
 		</div>
 
 		<div class="col-12 mt-4">

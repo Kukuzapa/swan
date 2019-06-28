@@ -36,9 +36,12 @@
 
 			$data = json_decode( $this->input->raw_input_stream, true );
 
-			$this->library->del_book( $data['deleted'] );
-
-			$fin['success'] = 'success';
+			if ( count( $data['deleted'] ) == 0 ) {
+				$fin['error'] = 'Список удаляемых книг не может быть пустым';
+			} else {
+				$this->library->del_book( $data['deleted'] );
+				$fin['success'] = 'success';
+			}
 
 			echo json_encode( $fin );
 		}
